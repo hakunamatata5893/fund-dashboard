@@ -121,9 +121,34 @@
   border-radius: 11px;
   color: white;
   background: var(--app-accent);
-  font-family: var(--font-display);
-  font-size: 23px;
+}
+
+.brand-mark svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.brand-title-line {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.version-badge {
+  border: 1px solid #e8d4c9;
+  border-radius: 999px;
+  padding: 1px 6px;
+  color: #934828;
+  background: var(--app-brand-soft);
+  font-family: var(--font-sans);
+  font-size: 10px;
   font-weight: 600;
+  line-height: 16px;
 }
 
 .top-nav {
@@ -306,14 +331,14 @@
 .index-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+  gap: 12px;
 }
 
 .index-card {
   min-width: 0;
   border: 1px solid var(--app-line);
   border-radius: var(--radius-md);
-  padding: 20px;
+  padding: 15px 16px;
   text-align: left;
   background: var(--app-paper);
   box-shadow: none;
@@ -324,7 +349,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 14px;
+  gap: 10px;
 }
 
 .index-title-row {
@@ -344,12 +369,12 @@
 
 .index-name {
   color: var(--app-ink);
-  font-size: 18px;
-  line-height: 1.35;
+  font-size: 17px;
+  line-height: 1.2;
 }
 
 .index-code {
-  margin-top: 2px;
+  margin-top: 1px;
   color: var(--app-muted);
   font-family: var(--font-mono);
   font-size: 12px;
@@ -358,7 +383,7 @@
 .index-group-tag {
   flex: 0 0 auto;
   border-radius: 9999px;
-  padding: 5px 10px;
+  padding: 4px 9px;
   color: #31559a;
   background: #eef3ff;
   font-size: 11px;
@@ -367,9 +392,9 @@
 
 .index-price {
   display: block;
-  margin-top: 20px;
+  margin-top: 12px;
   font-family: var(--font-mono);
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 700;
   line-height: 1;
   letter-spacing: -0.03em;
@@ -380,7 +405,7 @@
   display: flex;
   align-items: center;
   gap: 9px;
-  margin-top: 11px;
+  margin-top: 7px;
   font-family: var(--font-mono);
   font-size: 14px;
   font-weight: 600;
@@ -389,7 +414,7 @@
 
 .index-percent {
   border-radius: 9999px;
-  padding: 4px 9px;
+  padding: 3px 8px;
   color: #fff;
 }
 
@@ -400,23 +425,25 @@
 .index-detail-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px 18px;
-  margin-top: 20px;
+  gap: 8px 14px;
+  margin-top: 12px;
   border-top: 1px solid var(--app-line);
-  padding-top: 16px;
+  padding-top: 11px;
 }
 
 .index-detail-label {
   color: var(--app-muted);
   font-size: 11px;
+  line-height: 1.2;
 }
 
 .index-detail-value {
   overflow: hidden;
-  margin-top: 3px;
+  margin-top: 1px;
   color: var(--app-ink);
   font-family: var(--font-mono);
   font-size: 13px;
+  line-height: 1.25;
   font-variant-numeric: tabular-nums;
   text-overflow: ellipsis;
   white-space: nowrap;
