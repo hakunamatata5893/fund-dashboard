@@ -17,6 +17,7 @@ import {MarketOverview} from '@/components/MarketOverview'
 import {Overview} from '@/components/Overview'
 import {PortfolioTable} from '@/components/PortfolioTable'
 import {Watchlist} from '@/components/Watchlist'
+import packageInfo from '../package.json'
 import './index.css'
 
 const REFRESH_MS = 30_000
@@ -126,9 +127,18 @@ export default function App() {
     <div className="app-shell">
       <header className="topbar">
         <div className="brand-block">
-          <div className="brand-mark">基</div>
+          <div className="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img">
+              <path d="M4 19V13M10 19V9M16 19v-4" />
+              <path d="m4 9 5-4 4 3 7-6" />
+              <path d="M16 2h4v4" />
+            </svg>
+          </div>
           <div>
-            <div className="font-display text-lg font-semibold text-ink">基金看板</div>
+            <div className="brand-title-line">
+              <div className="font-display text-lg font-semibold text-ink">基金看板</div>
+              <span className="version-badge">v{packageInfo.version}</span>
+            </div>
             <div className="text-[11px] text-muted">
               {updatedAt ? `更新 ${updatedAt}` : '本地数据看板'}
             </div>

@@ -22,19 +22,19 @@ export function IndicesDashboard({
     <section id="indices" className="scroll-mt-20" aria-labelledby="indices-title">
       <Panel>
         <PanelHeader title="指数看板" desc="点击指数查看历史走势" titleId="indices-title" />
-        <div className="space-y-7 p-5 lg:p-6">
+        <div className="space-y-5 p-4 lg:p-5">
           {GROUPS.map((group) => {
             const groupItems = items.filter((item) => item.group === group)
             return (
               <div key={group}>
-                <div className="mb-3 flex items-center gap-3">
+                <div className="mb-2 flex items-center gap-3">
                   <h3 className="font-sans text-sm font-semibold text-ink">{group}</h3>
                   <div className="h-px flex-1 bg-line" />
                 </div>
                 <div className="index-grid">
                   {loading && !items.length
                     ? Array.from({length: group === 'A股' ? 8 : 2}).map((_, index) => (
-                        <div key={index} className="h-72 animate-pulse rounded-xl bg-paper-deep" />
+                        <div key={index} className="h-56 animate-pulse rounded-xl bg-paper-deep" />
                       ))
                     : groupItems.map((item) => (
                         <button
