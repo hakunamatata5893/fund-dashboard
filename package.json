@@ -1,0 +1,16 @@
+{
+  "name": "fund-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "本地基金持仓与指数看板",
+  "scripts": {
+    "dev": "npm run dev --prefix server",
+    "dev:web": "npm run dev --prefix web",
+    "dev:server": "npm run dev --prefix server",
+    "build": "npm run build --prefix web",
+    "typecheck": "npm run typecheck --prefix web",
+    "test": "npm run test --prefix web",
+    "start": "npm run start --prefix server",
+    "setup": "npm install --prefix server && npm install --prefix web && npm run build"
+  }
+}

@@ -1,0 +1,19 @@
+# Dependencies and generated files
+**/node_modules/
+web/dist/
+*.log
+
+# Local environment
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+
+# Personal portfolio data
+fund-backup/
+**/fund-dashboard-backup-*.json
+
+# Local reference materials, not part of the distributable project
+Source/
+UI规范/
